@@ -1,3 +1,5 @@
+using portal_do_conhecimento.pages;
+
 namespace portal_do_conhecimento
 {
     internal static class Program
@@ -11,7 +13,7 @@ namespace portal_do_conhecimento
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new Login());
+            Application.Run(new Darshboard());
         }
     }
 }
