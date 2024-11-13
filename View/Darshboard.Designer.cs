@@ -245,31 +245,32 @@
             // labelEmail
             // 
             labelEmail.AutoSize = true;
-            labelEmail.Font = new Font("Sans Serif Collection", 5.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            labelEmail.Font = new Font("Microsoft Sans Serif", 5.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             labelEmail.ForeColor = SystemColors.ControlDark;
-            labelEmail.Location = new Point(58, 90);
+            labelEmail.Location = new Point(78, 80);
             labelEmail.Name = "labelEmail";
-            labelEmail.Size = new Size(138, 17);
+            labelEmail.Size = new Size(73, 7);
             labelEmail.TabIndex = 2;
             labelEmail.Text = "emerson@gmail.com";
             // 
             // labelUser
             // 
-            labelUser.AutoSize = true;
-            labelUser.Font = new Font("Sans Serif Collection", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            labelUser.Location = new Point(64, 63);
+            labelUser.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            labelUser.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            labelUser.Location = new Point(77, 55);
             labelUser.Margin = new Padding(0);
             labelUser.Name = "labelUser";
-            labelUser.Size = new Size(127, 27);
+            labelUser.Size = new Size(74, 13);
             labelUser.TabIndex = 1;
             labelUser.Text = "Emerson Pires";
             // 
             // pictureBox1
             // 
+            pictureBox1.Dock = DockStyle.Top;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(97, 21);
+            pictureBox1.Location = new Point(0, 0);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(46, 39);
+            pictureBox1.Size = new Size(236, 39);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
@@ -316,21 +317,21 @@
             // labelQuantBoosEmp
             // 
             labelQuantBoosEmp.AutoSize = true;
-            labelQuantBoosEmp.Font = new Font("Sans Serif Collection", 14.2499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            labelQuantBoosEmp.Font = new Font("Microsoft Sans Serif", 14.2499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             labelQuantBoosEmp.ForeColor = Color.MediumBlue;
             labelQuantBoosEmp.Location = new Point(127, 96);
             labelQuantBoosEmp.Name = "labelQuantBoosEmp";
-            labelQuantBoosEmp.Size = new Size(37, 47);
+            labelQuantBoosEmp.Size = new Size(20, 24);
             labelQuantBoosEmp.TabIndex = 2;
             labelQuantBoosEmp.Text = "0";
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Font = new Font("Sans Serif Collection", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label4.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label4.Location = new Point(96, 43);
             label4.Name = "label4";
-            label4.Size = new Size(201, 32);
+            label4.Size = new Size(127, 16);
             label4.TabIndex = 1;
             label4.Text = "Livros Emprestados";
             // 
@@ -367,21 +368,21 @@
             // labelQuantBooksVend
             // 
             labelQuantBooksVend.AutoSize = true;
-            labelQuantBooksVend.Font = new Font("Sans Serif Collection", 14.2499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            labelQuantBooksVend.Font = new Font("Microsoft Sans Serif", 14.2499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             labelQuantBooksVend.ForeColor = Color.MediumBlue;
             labelQuantBooksVend.Location = new Point(127, 96);
             labelQuantBooksVend.Name = "labelQuantBooksVend";
-            labelQuantBooksVend.Size = new Size(37, 47);
+            labelQuantBooksVend.Size = new Size(20, 24);
             labelQuantBooksVend.TabIndex = 2;
             labelQuantBooksVend.Text = "0";
             // 
             // label6
             // 
             label6.AutoSize = true;
-            label6.Font = new Font("Sans Serif Collection", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label6.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label6.Location = new Point(96, 43);
             label6.Name = "label6";
-            label6.Size = new Size(165, 32);
+            label6.Size = new Size(104, 16);
             label6.TabIndex = 1;
             label6.Text = "Livros Vendidos";
             // 
@@ -418,21 +419,21 @@
             // labelQuantBooks
             // 
             labelQuantBooks.AutoSize = true;
-            labelQuantBooks.Font = new Font("Sans Serif Collection", 14.2499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            labelQuantBooks.Font = new Font("Microsoft Sans Serif", 14.2499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             labelQuantBooks.ForeColor = Color.MediumBlue;
             labelQuantBooks.Location = new Point(127, 96);
             labelQuantBooks.Name = "labelQuantBooks";
-            labelQuantBooks.Size = new Size(37, 47);
+            labelQuantBooks.Size = new Size(20, 24);
             labelQuantBooks.TabIndex = 2;
             labelQuantBooks.Text = "0";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Sans Serif Collection", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label2.Location = new Point(89, 43);
             label2.Name = "label2";
-            label2.Size = new Size(197, 32);
+            label2.Size = new Size(124, 16);
             label2.TabIndex = 1;
             label2.Text = "Livros Cadastrados";
             // 

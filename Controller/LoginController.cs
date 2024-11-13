@@ -52,7 +52,7 @@ namespace portal_do_conhecimento.Controller
                 SqlCommand insertCmd = new SqlCommand(insertQuery, conn);
                 insertCmd.Parameters.AddWithValue("@Email", "pdc.senac@gmail.com");
                 insertCmd.Parameters.AddWithValue("@Password", "123456");
-                insertCmd.Parameters.AddWithValue("@Name", "Emerson Pires");
+                insertCmd.Parameters.AddWithValue("@Name", "Admin");
                 insertCmd.ExecuteNonQuery();
             }
         }

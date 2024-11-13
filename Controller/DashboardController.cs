@@ -29,7 +29,7 @@ namespace portal_do_conhecimento.Controller
                                 Id INT IDENTITY(1,1) PRIMARY KEY,
                                 Name NVARCHAR(150) NOT NULL,
                                 Email NVARCHAR(150) NOT NULL,
-                                Phone NVARCHAR(11) UNIQUE NOT NULL,
+                                Phone NVARCHAR(15) UNIQUE NOT NULL,
                                 Age INT NOT NULL CHECK (Age BETWEEN 0 AND 120),
                                 Neighborhood NVARCHAR(100) NOT NULL,
                                 Street NVARCHAR(100) NOT NULL
