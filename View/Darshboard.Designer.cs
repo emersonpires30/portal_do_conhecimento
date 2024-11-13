@@ -24,15 +24,15 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Darshboard));
             splitContainer1 = new SplitContainer();
-            panel4 = new Panel();
+            panelRegisterBook = new Panel();
             panel14 = new Panel();
             label5 = new Label();
             pictureBox3 = new PictureBox();
-            panel12 = new Panel();
+            panelRegisterClient = new Panel();
             panel13 = new Panel();
             label3 = new Label();
             pictureBox7 = new PictureBox();
-            panel2 = new Panel();
+            panelHomePage = new Panel();
             panel3 = new Panel();
             label1 = new Label();
             pictureBox2 = new PictureBox();
@@ -62,11 +62,11 @@
             splitContainer1.Panel1.SuspendLayout();
             splitContainer1.Panel2.SuspendLayout();
             splitContainer1.SuspendLayout();
-            panel4.SuspendLayout();
+            panelRegisterBook.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
-            panel12.SuspendLayout();
+            panelRegisterClient.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
-            panel2.SuspendLayout();
+            panelHomePage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -92,9 +92,9 @@
             // splitContainer1.Panel1
             // 
             splitContainer1.Panel1.BackColor = Color.White;
-            splitContainer1.Panel1.Controls.Add(panel4);
-            splitContainer1.Panel1.Controls.Add(panel12);
-            splitContainer1.Panel1.Controls.Add(panel2);
+            splitContainer1.Panel1.Controls.Add(panelRegisterBook);
+            splitContainer1.Panel1.Controls.Add(panelRegisterClient);
+            splitContainer1.Panel1.Controls.Add(panelHomePage);
             splitContainer1.Panel1.Controls.Add(panel1);
             // 
             // splitContainer1.Panel2
@@ -104,18 +104,18 @@
             splitContainer1.SplitterDistance = 236;
             splitContainer1.TabIndex = 0;
             // 
-            // panel4
+            // panelRegisterBook
             // 
-            panel4.BackColor = Color.White;
-            panel4.Controls.Add(panel14);
-            panel4.Controls.Add(label5);
-            panel4.Controls.Add(pictureBox3);
-            panel4.Dock = DockStyle.Top;
-            panel4.Location = new Point(0, 221);
-            panel4.Name = "panel4";
-            panel4.Padding = new Padding(3);
-            panel4.Size = new Size(236, 46);
-            panel4.TabIndex = 3;
+            panelRegisterBook.BackColor = Color.White;
+            panelRegisterBook.Controls.Add(panel14);
+            panelRegisterBook.Controls.Add(label5);
+            panelRegisterBook.Controls.Add(pictureBox3);
+            panelRegisterBook.Dock = DockStyle.Top;
+            panelRegisterBook.Location = new Point(0, 221);
+            panelRegisterBook.Name = "panelRegisterBook";
+            panelRegisterBook.Padding = new Padding(3);
+            panelRegisterBook.Size = new Size(236, 46);
+            panelRegisterBook.TabIndex = 3;
             // 
             // panel14
             // 
@@ -146,18 +146,19 @@
             pictureBox3.TabIndex = 0;
             pictureBox3.TabStop = false;
             // 
-            // panel12
+            // panelRegisterClient
             // 
-            panel12.BackColor = Color.White;
-            panel12.Controls.Add(panel13);
-            panel12.Controls.Add(label3);
-            panel12.Controls.Add(pictureBox7);
-            panel12.Dock = DockStyle.Top;
-            panel12.Location = new Point(0, 175);
-            panel12.Name = "panel12";
-            panel12.Padding = new Padding(3);
-            panel12.Size = new Size(236, 46);
-            panel12.TabIndex = 2;
+            panelRegisterClient.BackColor = Color.White;
+            panelRegisterClient.Controls.Add(panel13);
+            panelRegisterClient.Controls.Add(label3);
+            panelRegisterClient.Controls.Add(pictureBox7);
+            panelRegisterClient.Dock = DockStyle.Top;
+            panelRegisterClient.Location = new Point(0, 175);
+            panelRegisterClient.Name = "panelRegisterClient";
+            panelRegisterClient.Padding = new Padding(3);
+            panelRegisterClient.Size = new Size(236, 46);
+            panelRegisterClient.TabIndex = 2;
+            panelRegisterClient.Click += panelRegisterClient_Click;
             // 
             // panel13
             // 
@@ -174,9 +175,9 @@
             label3.AutoSize = true;
             label3.Location = new Point(61, 16);
             label3.Name = "label3";
-            label3.Size = new Size(101, 15);
+            label3.Size = new Size(98, 15);
             label3.TabIndex = 1;
-            label3.Text = "Adicionar Usuário";
+            label3.Text = "Adicionar Cliente";
             // 
             // pictureBox7
             // 
@@ -188,18 +189,18 @@
             pictureBox7.TabIndex = 0;
             pictureBox7.TabStop = false;
             // 
-            // panel2
+            // panelHomePage
             // 
-            panel2.BackColor = Color.White;
-            panel2.Controls.Add(panel3);
-            panel2.Controls.Add(label1);
-            panel2.Controls.Add(pictureBox2);
-            panel2.Dock = DockStyle.Top;
-            panel2.Location = new Point(0, 129);
-            panel2.Name = "panel2";
-            panel2.Padding = new Padding(3);
-            panel2.Size = new Size(236, 46);
-            panel2.TabIndex = 1;
+            panelHomePage.BackColor = Color.White;
+            panelHomePage.Controls.Add(panel3);
+            panelHomePage.Controls.Add(label1);
+            panelHomePage.Controls.Add(pictureBox2);
+            panelHomePage.Dock = DockStyle.Top;
+            panelHomePage.Location = new Point(0, 129);
+            panelHomePage.Name = "panelHomePage";
+            panelHomePage.Padding = new Padding(3);
+            panelHomePage.Size = new Size(236, 46);
+            panelHomePage.TabIndex = 1;
             // 
             // panel3
             // 
@@ -476,14 +477,14 @@
             splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)splitContainer1).EndInit();
             splitContainer1.ResumeLayout(false);
-            panel4.ResumeLayout(false);
-            panel4.PerformLayout();
+            panelRegisterBook.ResumeLayout(false);
+            panelRegisterBook.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
-            panel12.ResumeLayout(false);
-            panel12.PerformLayout();
+            panelRegisterClient.ResumeLayout(false);
+            panelRegisterClient.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
-            panel2.ResumeLayout(false);
-            panel2.PerformLayout();
+            panelHomePage.ResumeLayout(false);
+            panelHomePage.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
@@ -509,7 +510,7 @@
         private Panel panel1;
         private Label labelUser;
         private PictureBox pictureBox1;
-        private Panel panel2;
+        private Panel panelHomePage;
         private Label labelEmail;
         private Label label1;
         private PictureBox pictureBox2;
@@ -530,12 +531,12 @@
         private Label labelQuantBooksVend;
         private Label label6;
         private PictureBox pictureBox6;
-        private Panel panel12;
+        private Panel panelRegisterClient;
         private Panel panel13;
         private Label label3;
         private PictureBox pictureBox7;
         private ListBox ListBoxUsers;
-        private Panel panel4;
+        private Panel panelRegisterBook;
         private Panel panel14;
         private Label label5;
         private PictureBox pictureBox3;

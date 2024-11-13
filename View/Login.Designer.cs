@@ -111,6 +111,7 @@
             tfPassword.Size = new Size(272, 20);
             tfPassword.TabIndex = 4;
             tfPassword.Text = "Senha";
+            tfPassword.UseSystemPasswordChar = true;
             tfPassword.TextChanged += tfPassword_TextChanged;
             // 
             // panel3
@@ -141,6 +142,7 @@
             buttonLogin.TabIndex = 6;
             buttonLogin.Text = "Entrar";
             buttonLogin.UseVisualStyleBackColor = true;
+            buttonLogin.Click += buttonLogin_Click;
             // 
             // buttonCloseApplication
             // 
@@ -172,7 +174,6 @@
             Name = "Login";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
-            Load += Form1_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();

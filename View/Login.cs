@@ -1,16 +1,20 @@
+using portal_do_conhecimento.Controller;
+using portal_do_conhecimento.Model;
+using portal_do_conhecimento.pages;
+
 namespace portal_do_conhecimento
 {
     public partial class Login : Form
     {
+
+        private readonly LoginController _loginController;
+
         public Login()
         {
             InitializeComponent();
+            _loginController = new LoginController();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
 
         private void tfUser_TextChanged(object sender, EventArgs e)
         {
@@ -40,6 +44,29 @@ namespace portal_do_conhecimento
         private void buttonCloseApplication_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void buttonLogin_Click(object sender, EventArgs e)
+        {
+            string usuario = tfUser.Text;
+            string senha = tfPassword.Text;
+
+            UserModel? user = _loginController.Login(usuario, senha);
+
+            if (user != null)
+            {
+                // Fechar o formulário de Login
+                this.Hide();
+
+                // Criar e mostrar o formulário Dashboard
+                Darshboard dashboard = new Darshboard(user);
+                dashboard.Show();
+
+            }
+            else
+            {
+                MessageBox.Show("Usuário ou senha inválidos.");
+            }
         }
     }
 }
