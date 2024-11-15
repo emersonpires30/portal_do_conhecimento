@@ -12,7 +12,7 @@ namespace portal_do_conhecimento.Controller
         public LoginController()
         {
             // Obtém a string de conexão do arquivo de configuração App.config
-            _connectionString = ConfigurationManager.ConnectionStrings["DatabaseConnection"].ConnectionString + ";Database=DBSenac";
+            _connectionString = ConfigurationManager.ConnectionStrings["DatabaseConnection"].ConnectionString;
 
             // Cria a tabela no banco de dados se ela ainda não existir
             CriarTabelaSeNaoExistir();
@@ -23,8 +23,10 @@ namespace portal_do_conhecimento.Controller
             string dbConnectionString = _connectionString;
             using (SqlConnection conn = new SqlConnection(dbConnectionString))
             {
+                /// Abre a conexao com o Banco de Dados
                 conn.Open();
 
+                /// SQL verificando se existe a tabela, caso nao exista ele cria a tabela no banco
                 string createTableQuery = @"
                     IF NOT EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'Users' AND TABLE_SCHEMA = 'dbo')
                     BEGIN
@@ -37,10 +39,11 @@ namespace portal_do_conhecimento.Controller
                     END
                 ";
 
+                /// Executa a funcao para criar a tabela no banco de dados
                 SqlCommand createTableCmd = new SqlCommand(createTableQuery, conn);
                 createTableCmd.ExecuteNonQuery();
 
-                // Adicionar um usuário de teste se ele não existir
+                /// Adicionar um usuário de teste se ele não existir
                 string insertQuery = @"
                         IF NOT EXISTS (SELECT * FROM Users WHERE Email = @Email)
                         BEGIN
@@ -48,7 +51,7 @@ namespace portal_do_conhecimento.Controller
                         END
                     ";
 
-                // Prepare o comando para inserir o usuário
+                /// Prepare o comando para inserir o usuário
                 SqlCommand insertCmd = new SqlCommand(insertQuery, conn);
                 insertCmd.Parameters.AddWithValue("@Email", "pdc.senac@gmail.com");
                 insertCmd.Parameters.AddWithValue("@Password", "123456");

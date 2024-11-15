@@ -11,7 +11,7 @@ namespace portal_do_conhecimento.Controller
         public DashboardController()
         {
             // Obtém a string de conexão do arquivo de configuração App.config
-            _connectionString = ConfigurationManager.ConnectionStrings["DatabaseConnection"].ConnectionString + ";Database=DBSenac";
+            _connectionString = ConfigurationManager.ConnectionStrings["DatabaseConnection"].ConnectionString;
 
         }
 
@@ -29,8 +29,8 @@ namespace portal_do_conhecimento.Controller
                                 Id INT IDENTITY(1,1) PRIMARY KEY,
                                 Name NVARCHAR(150) NOT NULL,
                                 Email NVARCHAR(150) NOT NULL,
-                                Phone NVARCHAR(15) UNIQUE NOT NULL,
-                                Age INT NOT NULL CHECK (Age BETWEEN 0 AND 120),
+                                Phone NVARCHAR(11) UNIQUE NOT NULL,
+                                Age INT NOT NULL CHECK (Age BETWEEN 1 AND 120),
                                 Neighborhood NVARCHAR(100) NOT NULL,
                                 Street NVARCHAR(100) NOT NULL
                             );

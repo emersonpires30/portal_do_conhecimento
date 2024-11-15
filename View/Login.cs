@@ -12,6 +12,7 @@ namespace portal_do_conhecimento
         public Login()
         {
             InitializeComponent();
+            /// Instancia do LoginController para ter acesso as funcoes que se comunicam com o banco de dados
             _loginController = new LoginController();
         }
 
